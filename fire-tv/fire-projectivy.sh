@@ -5,6 +5,7 @@
 #  and switches on the permission it needs.
 #  Optional: FIRE_IP=192.168.x.x bash fire-projectivy.sh
 # ============================================================
+main() {
 G='\033[1;32m'; R='\033[1;31m'; Y='\033[1;33m'; N='\033[0m'
 say(){ echo -e "${G}▶ $*${N}"; }
 warn(){ echo -e "${Y}⚠ $*${N}"; }
@@ -83,3 +84,5 @@ $A shell monkey -p com.spocky.projengmenu 1 >/dev/null 2>&1
 echo
 say "All done! Projectivy is open on the TV."
 echo -e "${Y}Last step on the TV:${N} gear icon > Projectivy Launcher settings > General > turn ON 'Override current launcher'"
+}
+main "$@" </dev/null
